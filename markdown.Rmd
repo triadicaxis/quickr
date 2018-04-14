@@ -1,0 +1,136 @@
+---
+output:
+  html_document: default
+  word_document: default
+source1: https://ia.net/writer/support/general/markdown-guide#toc
+source2: https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
+source3: http://rmarkdown.rstudio.com/authoring_basics.html
+source4: http://rmarkdown.rstudio.com/
+---
+
+# Title
+
+## Section
+
+### Sub-section
+
+#### Sub-sub-section (let's not get carried away)
+
+Here is a section line break (using three of underscores, but you can use three or more dashes or asterixes too):
+
+___
+
+This is just a normal text block with some `typewriter text` inserted.  
+This is just a normal text block with some *italic text* inserted.  
+This is just normal text with some **bold text** inserted.  
+This is just normal text with some ***bold italicised text*** inserted.  
+(You must end a line with two or more spaces.)
+
+```
+<script type="text/javascript" src="http://charts.silverprice.org/silver-price.js"></script>
+<script type="text/javascript" src="http://charts.silverprice.org/silver-price.js"></script>
+```
+
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=QPKKQnijnsM
+" target="_blank"><img src="http://img.youtube.com/vi/QPKKQnijnsM/0.jpg" 
+alt="Wealth inequality in America" width="240" height="180" border="10" /></a>
+
+
+> *a quote can be generated using > space and italics*
+
+#### Below is a code chunk
+```{r}
+## here is a code chunk
+x <- c(1:30)
+y <- 1.2
+m <- matrix(data = x, nrow = 10, ncol = 3)
+m
+```
+
+#### Below is the exact same code chunk, showing only the output
+```{r echo=FALSE}
+## here is a code chunk with source code hidden, only showing the output
+x <- c(1:30)
+y <- 1.2
+m <- matrix(data = x, nrow = 10, ncol = 3)
+m
+n <- m*y
+```
+
+The sum of all the values of m is `r sum(m)`.  
+The mean of all the values of x is `r mean(x)`.  
+The standard deviation of x is `r sd(x)`.
+
+Here is a bullet list, it requires a * and 1 space:
+
+* First dot point
+* Second dot point
+    + A subpoint (requires 4 spaces, followed by * or +)
+* Third dot point
+
+
+Here is a numered list:
+
+1. Item 1
+2. Item 2
+3. Item 3
+    + Item 3a
+    + Item 3b
+
+___
+
+#### Here is how you can get subscripts:
+
+$H_0$: Some null hypothesis here.  
+$H_1$: Some alternative hypothesis here.
+
+Here is an equation: $PV=FV*(1+r)/t$  
+Display equation: $$ PV=FV*(1+r)^{-t} $$ 
+Note the superscript is *^something^* or in an equation $R^{2}$  
+While we are at it, subscript is $y_{i,t}$  
+
+#### Let's try a few real formulas:
+Formula for mean is $\frac{1}{n} \sum_{i=i}^{n} x_{i}$  
+Formula for fixed effects model is $y_{i,t} = \alpha_{i} + \beta x_{i,t} + \epsilon_{i,t}$  
+
+And here is an inline equation: $A = \pi*r^{2}$  
+
+#### Below is a chart. I've set the size and hidden the source code.
+```{r echo=FALSE, fig.width=4, fig.height=4}
+plot(m, n)
+```
+
+[Here is a link to ABS key indicators](http://abs.gov.au/AUSSTATS/abs@.nsf/mf/1345.0)  
+[Here is a link to RBA cash rate](http://www.rba.gov.au/statistics/cash-rate)
+
+Here is some text with a footnote.[^1]  
+Here is some other text with another footnote.[^2]  
+
+---
+Presumably this is a comment and won't show up. I've put the footnotes just below.
+---
+
+[^1]: The linked footnote appears at the end of the document.
+[^2]: The linked footnote appears at the end of the document.
+
+#### Finally a table:
+
+|Header |Column 1 | Column 2 | Column 3  | 
+|:--- |:---- |:----:| ----:|
+|1. Row| is | is | is  |
+|2. Row| left | nicely | right  |
+|3. Row| aligned | centered | aligned  |  
+
+#### Bonus trick, a faked formatted table:
+
+|Header  | Column 1 | Column 2 | Column 3 | 
+|:------ |:-------- |:--------:| --------:|
+|1. Row  | is       | is       | is       |
+|2. Row  | left     | nicely   | right    |
+|3. Row  | aligned  | centered | aligned  |  
+
+
+|Var     | Sum of ..  | Mean of ..  | SD of ..   | 
+|:------ | ----------:| -----------:| ----------:|
+|1. x    | `r sum(x)` | `r mean(x)` | `r sd(x)`  |
+|2. n    | `r sum(n)` | `r mean(n)` | `r sd(n)`  |
