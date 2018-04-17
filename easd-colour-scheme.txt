@@ -1,0 +1,10 @@
+# Primary colours
+# 1. RGB: 41, 43, 103 or #292B67
+# 2. RGB: 158, 217, 223 or #9ED9DF
+# 3. RGB: 34, 120, 154 or #22789A
+# 4. RGB: 188, 191, 193 or #BCBFC1 (Please use for chart lines and ticks)
+# 5. RGB: 89, 90, 91 or #595A5B (Please use for chart font)
+#
+# Secondary colours
+# RGB: 86, 180, 223 or #56B4DF
+# RGB: 0, 114, 178 or #0072B2

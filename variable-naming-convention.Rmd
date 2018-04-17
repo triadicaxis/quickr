@@ -1,0 +1,56 @@
+---
+title: "Variable naming convention"
+output:
+  html_document: default
+  pdf_document: default
+  word_document: default
+---
+Last update: `r Sys.Date()`   
+
+| Margin 1: row fun | Margin 2: col fun | Orig. dataset | Row ref. | Col ref.  |
+|:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|
+|              rsum |              csum |             X |       r1 |        c1 |
+|             rmean |             cmean |             Y |       r2 |        c2 |
+|                .. |                .. |            .. |       .. |        .. |
+|              rfun |              cfun |             Z |       rn |        cn |
+|              rfun |              cfun |            ZZ |       rn |        cn |
+|              rfun |              cfun |            XY |       rn |        cn |
+|              rfun |              cfun |           XYZ |       rn |        cn |
+
+
+Example 1: **X**    
+table X (this is a dataframe or matrix, can denote as df1, mat2 ..)
+
+Example 2: **X.r8**    
+table X, row 8 (this is a vector, can denote as row1, vec2 ..)
+
+Example 3: **X.c5**    
+table X, column 5 (this is a vector, can denote as col1, vec2 ..)
+
+Example 4: **X.r8.c5**    
+table X, row 8, column 5 (this is a single value, can denote as val1, val2 ..)
+
+Example 5: **rsum.X**    
+vector of horizontal sum of all the columns in each row of X (margin 1, rowSums(X))
+
+Example 6: **csum.X**    
+vector of vertical sum of all the rows in each column of X (margin 2, colSums(X))
+
+Example 7: **cfun1.X**    
+vector of results of a function applied to each row of X, column by column (margin 2, fun1(X)[ ,1:cn])
+
+Example 8: **rsum.r8.X**    
+horizontal sum of row 8 (margin 1, rowSums(X)[8, ])
+
+Example 9: **csum.c5.X**    
+vertical sum of column 5 (margin 2, colSums(X)[ ,5])
+
+Example 10: **cfun1.c5.X**    
+fun1 applied to every cell in column 5 (margin 2, cfun1(X)[ ,5])
+
+Example 11: **XX**    
+new table derived solely from original table X
+
+Example 12: **XY**    
+new table derived from tables X and Y
+
