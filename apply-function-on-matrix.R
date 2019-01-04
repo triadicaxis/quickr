@@ -1,4 +1,4 @@
-## use the apply function to iterate over a matrix, but NOT a fataframe
+## use the apply function to iterate over a matrix, but NOT a dataframe
 mat <- matrix(1:9, nrow=3, ncol=3, byrow=FALSE)
 mat
 
