@@ -1,3 +1,6 @@
 http://www.cookbook-r.com/Manipulating_data/
 http://adv-r.had.co.nz/Subsetting.html
 http://www.cookbook-r.com/Manipulating_data/Merging_data_frames/
+https://www.tidytextmining.com/
+https://plotly-book.cpsievert.me/
+

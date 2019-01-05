@@ -3,6 +3,7 @@
 rm(list = ls())
 
 ## source: https://www.youtube.com/watch?v=EuCOW-S5S6s
+## source: https://plotly-book.cpsievert.me/
 
 #################################################################################
 
